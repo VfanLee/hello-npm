@@ -2,7 +2,7 @@ const { execSync } = require('child_process')
 const path = require('path')
 
 const version = process.argv[2]
-const packagePath = path.resolve(__dirname, '../dist')
+const packagePath = path.resolve(__dirname, '../')
 
 function main() {
   console.log(`Publishing version: ${version} to npm...`)
