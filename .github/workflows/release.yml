@@ -32,10 +32,9 @@ jobs:
 
       - name: Publish to npm
         run: |
-          # 读取版本号并自动判断标签
           VERSION=$(node -p "require('./package.json').version")
           echo "Publishing version: $VERSION"
-          
+
           if [[ "$VERSION" == *"-alpha"* ]]; then
             TAG="alpha"
             echo "Publishing as alpha tag..."
@@ -52,7 +51,7 @@ jobs:
             TAG="latest"
             echo "Publishing as latest stable version..."
           fi
-          
+
           npm publish --tag $TAG
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

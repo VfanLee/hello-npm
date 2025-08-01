@@ -1,25 +1,25 @@
 {
   "name": "@vfanlee/hello-npm",
-  "version": "1.0.5-next.0",
+  "version": "1.0.5",
   "description": "vfanlee - hello npm",
+  "keywords": [
+    "npm",
+    "hello",
+    "vfanlee"
+  ],
   "main": "dist/index.js",
   "files": [
     "README.md",
     "dist"
   ],
+  "author": "Vfan Lee",
+  "license": "MIT",
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
     "release": "node scripts/release.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
-  "keywords": [
-    "npm",
-    "hello",
-    "vfanlee"
-  ],
-  "author": "Vfan Lee",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.19.9",
     "conventional-changelog-cli": "^5.0.0",
