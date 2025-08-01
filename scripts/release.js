@@ -9,13 +9,13 @@ function main() {
     if (version.includes('-alpha') || version.includes('-beta')) {
       console.log('Creating prerelease GitHub release...')
       execSync(
-        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to [CHANGELOG.md](https://github.com/VfanLee/vue-qrcode/blob/main/CHANGELOG.md) for details." --prerelease`,
+        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to CHANGELOG.md for details." --prerelease`,
         { stdio: 'inherit' }
       )
     } else {
       console.log('Creating stable GitHub release...')
       execSync(
-        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to [CHANGELOG.md](https://github.com/VfanLee/vue-qrcode/blob/main/CHANGELOG.md) for details."`,
+        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to CHANGELOG.md for details."`,
         { stdio: 'inherit' }
       )
     }

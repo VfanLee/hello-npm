@@ -2,7 +2,7 @@ const { execSync } = require('child_process')
 const path = require('path')
 
 const version = process.argv[2]
-const packagePath = path.resolve(__dirname, '../packages/vue-qrcode')
+const packagePath = path.resolve(__dirname, '../dist')
 
 function main() {
   console.log(`Publishing version: ${version} to npm...`)
@@ -20,7 +20,7 @@ function main() {
   }
 
   try {
-    const publishCommand = tag ? `pnpm publish --tag ${tag} --no-git-checks` : 'pnpm publish --no-git-checks'
+    const publishCommand = tag ? `npm publish --tag ${tag} --no-git-checks` : 'npm publish --no-git-checks'
 
     execSync(publishCommand, { cwd: packagePath, stdio: 'inherit' })
   } catch (error) {
