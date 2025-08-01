@@ -1,16 +1,23 @@
 {
   "name": "@vfanlee/hello-npm",
-  "version": "1.0.2",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "vfanlee - hello npm",
+  "main": "dist/index.js",
   "files": [
-    "index.js",
-    "README.md"
+    "README.md",
+    "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
-  "keywords": [],
+  "keywords": [
+    "npm",
+    "hello",
+    "vfanlee"
+  ],
   "author": "Vfan Lee",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "conventional-changelog-cli": "^5.0.0"
+  }
 }
