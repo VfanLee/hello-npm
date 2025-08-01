@@ -1,6 +1,6 @@
 {
   "name": "@vfanlee/hello-npm",
-  "version": "1.0.5-rc.0",
+  "version": "1.0.5-next.0",
   "description": "vfanlee - hello npm",
   "main": "dist/index.js",
   "files": [

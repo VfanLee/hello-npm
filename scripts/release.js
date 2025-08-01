@@ -1,21 +1,22 @@
 const { execSync } = require('child_process')
 
 const version = process.argv[2]
+const tags = ['alpha', 'beta', 'rc', 'next']
 
 function main() {
   console.log(`Creating GitHub release for version: ${version}`)
 
   try {
-    if (version.includes('-alpha') || version.includes('-beta')) {
+    if (tags.some((tag) => version.includes(`-${tag}`))) {
       console.log('Creating prerelease GitHub release...')
       execSync(
-        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to CHANGELOG.md for details." --prerelease`,
+        `gh release create ${version} --title "${version}" --notes "For complete changelog, see [CHANGELOG.md](https://github.com/VfanLee/hello-npm/blob/main/CHANGELOG.md)." --prerelease`,
         { stdio: 'inherit' }
       )
     } else {
       console.log('Creating stable GitHub release...')
       execSync(
-        `gh release create ${version} --title "${version}" --notes "For stable releases, please refer to CHANGELOG.md for details."`,
+        `gh release create ${version} --title "${version}" --notes "For complete changelog, see [CHANGELOG.md](https://github.com/VfanLee/hello-npm/blob/main/CHANGELOG.md)."`,
         { stdio: 'inherit' }
       )
     }
