@@ -1,3 +1,7 @@
+## [1.0.5-rc.0](https://github.com/VfanLee/hello-npm/compare/v1.0.5-beta.0...v1.0.5-rc.0) (2025-08-01)
+
+
+
 ## [1.0.5-beta.0](https://github.com/VfanLee/hello-npm/compare/v1.0.5-alpha.1...v1.0.5-beta.0) (2025-08-01)
 
 
